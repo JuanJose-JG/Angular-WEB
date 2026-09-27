@@ -1,0 +1,43 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 280" width="100%" height="100%" fill="none">
+  <defs>
+    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#f8fafc"/>
+      <stop offset="100%" stop-color="#e2e8f0"/>
+    </linearGradient>
+    <linearGradient id="bookGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#cbd5e1"/>
+      <stop offset="100%" stop-color="#94a3b8"/>
+    </linearGradient>
+  </defs>
+
+  <!-- Background card -->
+  <rect width="200" height="280" rx="8" fill="url(#bgGrad)"/>
+  <rect x="1" y="1" width="198" height="278" rx="7" stroke="#cbd5e1" stroke-width="1.5" stroke-dasharray="6 4"/>
+
+  <!-- Book Spine / Cover Icon -->
+  <g transform="translate(60, 75)">
+    <!-- Book silhouette -->
+    <path d="M4 8C4 5.79086 5.79086 4 8 4H64C70.6274 4 76 9.37258 76 16V80C76 80 69 77 64 77H8C5.79086 77 4 75.2091 4 73V8Z" fill="url(#bookGrad)" opacity="0.35"/>
+    <path d="M8 4H64C70.6274 4 76 9.37258 76 16V80C70.5 77 64 77 64 77H8C5.79086 77 4 75.2091 4 73V8C4 5.79086 5.79086 4 8 4Z" stroke="#64748b" stroke-width="2.5" stroke-linejoin="round"/>
+    <!-- Spine line -->
+    <line x1="16" y1="4" x2="16" y2="76" stroke="#64748b" stroke-width="2" stroke-linecap="round"/>
+    
+    <!-- Image/Picture placeholder inside book -->
+    <rect x="25" y="18" width="42" height="34" rx="4" fill="#ffffff" stroke="#94a3b8" stroke-width="1.5"/>
+    <!-- Sun/dot -->
+    <circle cx="34" cy="27" r="3" fill="#94a3b8"/>
+    <!-- Mountains -->
+    <path d="M27 46L37 34L46 44L52 38L65 48" stroke="#94a3b8" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+    
+    <!-- Slash / No-image diagonal -->
+    <line x1="20" y1="60" x2="68" y2="12" stroke="#ef4444" stroke-width="2.5" stroke-linecap="round"/>
+  </g>
+
+  <!-- Text -->
+  <text x="100" y="188" text-anchor="middle" font-family="system-ui, -apple-system, sans-serif" font-size="14" font-weight="600" fill="#475569">
+    Sin portada
+  </text>
+  <text x="100" y="206" text-anchor="middle" font-family="system-ui, -apple-system, sans-serif" font-size="11" fill="#94a3b8">
+    No disponible
+  </text>
+</svg>
