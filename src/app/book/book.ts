@@ -1,5 +1,7 @@
 import { Component, OnInit, signal } from '@angular/core';
 import { BookService } from '../services/book-service';
+import { MatDialog } from '@angular/material/dialog';
+import { Modal } from '../modal/modal';
 
 @Component({
   imports: [],
@@ -10,7 +12,7 @@ import { BookService } from '../services/book-service';
 export class Book implements OnInit {
   protected searchQuery = signal('');
 
-  constructor(public bookService: BookService) { }
+  constructor(public bookService: BookService, private _matDialog: MatDialog) { }
 
   ngOnInit(): void {
     this.getBooks();
@@ -30,6 +32,12 @@ export class Book implements OnInit {
       error: (err) => {
         console.log(err);
       }
+    });
+  }
+
+  bookDetail(book: any) {
+    this._matDialog.open(Modal, {
+      data: book
     });
   }
 }
