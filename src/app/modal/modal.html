@@ -1,4 +1,4 @@
-<div class="p-5">
+<div class="p-5 font-quattrocento bg-white dark:bg-mist-800">
     <div class="flex justify-center">
         @if (book.volumeInfo?.imageLinks) {
         <img class="w-40 object-cover h-full p-3" [src]="book.volumeInfo.imageLinks.thumbnail"
@@ -7,10 +7,10 @@
         <img class="object-contain h-full" src="/images/no-image.svg" alt="{{ book.volumeInfo?.title }}" />
         }
     </div>
-    <div class="pt-5 h-64 overflow-auto">
-        <p class="text-4xl text-center pb-3">{{book.volumeInfo.title}}</p>
+    <div class="pt-5 h-64 dark:text-slate-200 overflow-auto scrollbar-thin dark:scrollbar-thumb-slate-500">
+        <p class="text-4xl text-center pb-3 font-bold">{{book.volumeInfo.title}}</p>
         <p>{{book.volumeInfo.description}}</p>
-        <a class="text-blue-500 font-semibold text-lg" [href]="book.volumeInfo.previewLink" target="_blank">More
+        <a class="text-blue-500 font-bold text-lg" [href]="book.volumeInfo.previewLink" target="_blank">More
             info</a>
     </div>
 </div>

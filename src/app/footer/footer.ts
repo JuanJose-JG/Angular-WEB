@@ -5,8 +5,8 @@ import { Component, signal } from '@angular/core';
   selector: 'app-footer',
   styles: ``,
   template: `
-  <div class="flex justify-center my-10">
-    <p class="text-white">Copyright {{ year() }} - Angular Web</p>
+  <div class="flex justify-center items-center py-6">
+    <p class="dark:text-slate-200">Copyright {{ year() }} - Angular Web</p>
   </div>
   `,
 })

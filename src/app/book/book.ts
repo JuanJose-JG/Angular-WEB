@@ -11,6 +11,7 @@ import { Modal } from '../modal/modal';
 })
 export class Book implements OnInit {
   protected searchQuery = signal('');
+  protected isLoading = signal(false);
 
   constructor(public bookService: BookService, private _matDialog: MatDialog) { }
 
@@ -24,13 +25,16 @@ export class Book implements OnInit {
   }
 
   getBooks(query: string = 'angular') {
+    this.isLoading.set(true);
+
     this.bookService.getBooks(query).subscribe({
       next: (data) => {
         this.bookService.books.set(data.items || []);
-        console.log(this.bookService.books());
+        this.isLoading.set(false);
       },
       error: (err) => {
         console.log(err);
+        this.isLoading.set(false);
       }
     });
   }

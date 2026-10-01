@@ -2,11 +2,26 @@
 
 
 @import 'tailwindcss';
+@custom-variant dark (&:where(.dark, .dark *));
 
-:root {
-    color-scheme: dark;
+@theme {
+    --font-quattrocento: 'Quattrocento', serif;
 }
 
-.body {
-    font-family: monospace;
+@font-face {
+    font-family: 'Quattrocento';
+    src: url('../public/fonts/Quattrocento-Bold.woff2') format('woff2'),
+        url('../public/fonts/Quattrocento-Bold.woff') format('woff');
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Quattrocento';
+    src: url('../public/fonts/Quattrocento.woff2') format('woff2'),
+        url('../public/fonts/Quattrocento.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
 }

@@ -1,5 +1,6 @@
-import { Component, Inject } from '@angular/core';
+import { Component, inject, Inject } from '@angular/core';
 import { MAT_DIALOG_DATA, MatDialogRef } from '@angular/material/dialog';
+import { ThemeService } from '../services/theme-service';
 
 @Component({
   imports: [],
@@ -8,6 +9,8 @@ import { MAT_DIALOG_DATA, MatDialogRef } from '@angular/material/dialog';
   templateUrl: './modal.html',
 })
 export class Modal {
+  themeService = inject(ThemeService);
+
   constructor(
     public matDialogRef: MatDialogRef<Modal>,
     @Inject(MAT_DIALOG_DATA) public book: any

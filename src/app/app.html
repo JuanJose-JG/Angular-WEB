@@ -1,2 +1,14 @@
-<app-user />
-<app-footer />
+<button class="absolute left-5 top-5 flex transition-transform hover:scale-125 cursor-pointer"
+    (click)="themeService.toggle()">
+    @if (themeService.darkMode()) {
+    <span class="material-symbols-outlined text-white">light_mode</span>
+    }
+    @else {
+    <span class="material-symbols-outlined">dark_mode</span>
+    }
+</button>
+
+<main class="bg-slate-100 dark:bg-mist-900 font-quattrocento">
+    <app-user />
+    <app-footer />
+</main>

@@ -1,6 +1,7 @@
-import { Component, signal } from '@angular/core';
+import { Component, inject } from '@angular/core';
 import { User } from './user/user';
 import { Footer } from './footer/footer';
+import { ThemeService } from './services/theme-service';
 
 @Component({
   imports: [User, Footer],
@@ -9,6 +10,5 @@ import { Footer } from './footer/footer';
   templateUrl: './app.html',
 })
 export class App {
-  protected readonly title = signal('angular web');
-  protected user = signal('juan');
+  themeService = inject(ThemeService)
 }
